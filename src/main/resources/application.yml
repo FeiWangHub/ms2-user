@@ -1,0 +1,33 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: Fei-Heroku-Spring-Test
+  profiles:
+    active: dev
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://ec2-54-89-105-122.compute-1.amazonaws.com:5432/d4b1l0ahc31j3i}
+    username: ${SPRING_DATASOURCE_USERNAME:rmhutxoyhjgrai}
+    password: ${SPRING_DATASOURCE_PASSWORD:90585e1f1e6bbfc4f3386d7edba3e1cde0c88849866de96abdac4defc0038c2d}
+    druid:
+      initial-size: 5
+      max-active: 20
+      min-idle: 10
+      max-wait: 6000
+      pool-prepared-statements: false
+      validation-query: select 1
+      validation-query-timeout: 10
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 180000
+      min-evictable-idle-time-millis: 600000
+      max-evictable-idle-time-millis: 900000
+  thymeleaf:
+    mode: HTML
+
+logging:
+  level:
+    org:
+      springframework: INFO
