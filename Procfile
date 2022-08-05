@@ -1,1 +1,1 @@
-web: java -jar target/heroku-payment-1.0.jar
+web: java -jar target/heroku-fei-1.0.jar
