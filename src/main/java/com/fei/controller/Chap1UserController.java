@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class Chap1UserController {
 
     @Resource
     UserDao userDao;

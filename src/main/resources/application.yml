@@ -24,6 +24,16 @@ spring:
       time-between-eviction-runs-millis: 180000
       min-evictable-idle-time-millis: 600000
       max-evictable-idle-time-millis: 900000
+  redis:
+    host: redis://ec2-44-205-222-104.compute-1.amazonaws.com
+    port: 10640
+    password: p330b682b828e5234c8f003145a043b490c53485b82c18a8068c2a7512e1ae6d3
+    #uri: redis://:p330b682b828e5234c8f003145a043b490c53485b82c18a8068c2a7512e1ae6d3@ec2-44-205-222-104.compute-1.amazonaws.com:10640
+
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
 
 logging:
   level:
