@@ -21,11 +21,11 @@ public class AppConfig {
         };
     }
 
-    public static StatefulRedisConnection<String, String> connect() {
-//        RedisURI redisURI = RedisURI.create(System.getenv("REDIS_URL"));
-        RedisURI redisURI = RedisURI.create("redis://:p330b682b828e5234c8f003145a043b490c53485b82c18a8068c2a7512e1ae6d3@ec2-44-205-222-104.compute-1.amazonaws.com:10640");
-        redisURI.setVerifyPeer(false);
-        RedisClient redisClient = RedisClient.create(redisURI);
-        return redisClient.connect();
-    }
+//    public static StatefulRedisConnection<String, String> connect() {
+////        RedisURI redisURI = RedisURI.create(System.getenv("REDIS_URL"));
+//        RedisURI redisURI = RedisURI.create("redis://:p330b682b828e5234c8f003145a043b490c53485b82c18a8068c2a7512e1ae6d3@ec2-44-205-222-104.compute-1.amazonaws.com:10640");
+//        redisURI.setVerifyPeer(false);
+//        RedisClient redisClient = RedisClient.create(redisURI);
+//        return redisClient.connect();
+//    }
 }
