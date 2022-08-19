@@ -29,6 +29,8 @@
         <!-- JDBC -->
         <!-- JDBC Connection Pool -->
         <druid-spring-boot-starter.version>1.2.8</druid-spring-boot-starter.version>
+        <spring-kafka-version>2.2.14.RELEASE</spring-kafka-version>
+        <hutool.version>5.8.5</hutool.version>
     </properties>
 
     <dependencies>
@@ -73,6 +75,20 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!-- Kafka -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>${spring-kafka-version}</version>
+        </dependency>
+
+        <!-- JAVA Util大全工具箱 https://www.hutool.cn/docs/#/-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
         </dependency>
 
         <!-- Lombok -->

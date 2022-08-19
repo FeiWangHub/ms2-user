@@ -16,18 +16,28 @@
 
 package com.fei;
 
+import cn.hutool.extra.spring.SpringUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Controller;
+
+import javax.annotation.Resource;
 
 @Controller
 @SpringBootApplication
 @EnableDiscoveryClient
 public class Application {
 
+//    @Resource
+//    private KafkaTemplate<String, Object> kafkaTemplate;
+
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+
+        KafkaTemplate<String, String> kaf = SpringUtil.getBean("kafkaTemplate");
+        kaf.send("wj0jddu6-default","fei spring boot main producer");//producer
     }
 
 }
