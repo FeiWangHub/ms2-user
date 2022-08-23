@@ -36,8 +36,8 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
 
-        KafkaTemplate<String, String> kaf = SpringUtil.getBean("kafkaTemplate");
-        kaf.send("wj0jddu6-default","fei spring boot main producer");//producer
+//        KafkaTemplate<String, String> kaf = SpringUtil.getBean("kafkaTemplate");
+//        kaf.send("wj0jddu6-default","fei spring boot main producer");//producer
     }
 
 }
